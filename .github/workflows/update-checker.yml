@@ -5,7 +5,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File: .github/workflows/update-checker.yml
+File: .github/workflows/update-checker.yml
 # Description: Source code update checker
 #
 
@@ -18,7 +18,7 @@ env:
 on:
   workflow_dispatch:
 #  schedule:
-#    - cron: 0 */18 * * *
+    - cron: 0 */18 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn > /dev/null 2>&1
 
 jobs:
   check:
